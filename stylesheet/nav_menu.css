@@ -1,0 +1,316 @@
+html{
+	background:url('../images/background.jpg') #fefefe;
+	position:absolute;
+}
+
+body{
+  padding: 0 0 0;
+	font:14px/1.3 'Segoe UI',Arial, sans-serif;
+	min-height:500px;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+section, nav{
+	display: block;
+}
+
+/*----------------------------
+	The Navigation Menu
+-----------------------------*/
+
+#nav-patch{
+	position: relative;
+	top: 50px;
+	left: auto;
+	width: inherit;
+	height: 1200%;
+	background: rgba(94,186,219,1);
+	background: -moz-linear-gradient(top, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(94,186,219,1)), color-stop(38%, rgba(42,152,186,1)), color-stop(53%, rgba(22,138,173,1)), color-stop(65%, rgba(40,150,185,1)), color-stop(100%, rgba(94,186,219,1)));
+	background: -webkit-linear-gradient(top, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
+	background: -o-linear-gradient(top, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
+	background: -ms-linear-gradient(top, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
+	background: linear-gradient(to bottom, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ebadb', endColorstr='#5ebadb', GradientType=0 );
+	z-index: 0;
+}
+
+#colorNav{
+	display: block;
+	position: absolute;
+	top: 135px;
+	left: auto;
+	height: 8%;
+	width: 10000%;
+	padding: 10px;
+	background: rgba(94,186,219,1);
+	background: -moz-linear-gradient(top, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(94,186,219,1)), color-stop(38%, rgba(42,152,186,1)), color-stop(53%, rgba(22,138,173,1)), color-stop(65%, rgba(40,150,185,1)), color-stop(100%, rgba(94,186,219,1)));
+	background: -webkit-linear-gradient(top, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
+	background: -o-linear-gradient(top, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
+	background: -ms-linear-gradient(top, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
+	background: linear-gradient(to bottom, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ebadb', endColorstr='#5ebadb', GradientType=0 );
+	z-index: 0;
+}
+#colorNav > ul{
+	width: auto; /* Increase when adding more menu items */
+	margin:0 auto;
+}
+
+#colorNav > ul > li{ /* will style only the top level li */
+	list-style: none;
+	box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset,1px 1px 1px #CCC;
+	display: inline-block;
+	line-height: auto;
+	margin: 1px;
+	border-radius: 6px;
+	position:relative;
+}
+
+#colorNav > ul > li > a{
+	color:inherit;
+	font-size:15px;
+	padding:5px;
+	width: 135px;
+	height: auto;
+	text-decoration:none !important;
+}
+
+#colorNav > ul > li > a:hover{
+	transform: scale(1.1);
+	color: white;
+}
+
+#colorNav > ul > li > ul > li > a:hover{
+	transform: scale(1.1);
+}
+
+#colorNav li ul{
+	position:absolute;
+	list-style:none;
+	text-align:center;
+	width:180px;
+	left:50%;
+	margin-left:-90px;
+	top:70px;
+	font:bold 12px 'Open Sans Condensed', sans-serif;
+
+	/* This is important for the show/hide CSS animation */
+	max-height:0px;
+	overflow:hidden;
+
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+
+#colorNav li ul li{
+	background-color:#313131;
+}
+
+#colorNav li ul li a{
+	padding:12px;
+	color:#fff !important;
+	text-decoration:none !important;
+	display:block;
+}
+
+#colorNav li ul li:nth-child(odd){ /* zebra stripes */
+	background-color:#363636;
+}
+
+#colorNav li ul li:hover{
+	background-color:#444;
+}
+
+#colorNav li ul li:first-child{
+	border-radius:3px 3px 0 0;
+	margin-top:25px;
+	position:relative;
+}
+
+#colorNav li ul li:first-child:before{ /* the pointer tip */
+	content:'';
+	position:absolute;
+	width:1px;
+	height:1px;
+	border:5px solid transparent;
+	border-bottom-color:#313131;
+	left:50%;
+	top:-10px;
+	margin-left:-5px;
+}
+
+#colorNav li ul li:last-child{
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+/* This will trigger the CSS */
+/* transition animation on hover */
+
+#colorNav li:hover ul{
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	max-height:400px; /* Increase when adding more dropdown items */
+	z-index: 1;
+}
+
+
+/*----------------------------
+	Color Themes
+-----------------------------*/
+
+#colorNav li.green{
+	/* This is the color of the menu item */
+	background-color:#00c08b;
+
+	/* This is the color of the icon */
+	color:#127a5d;
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+#colorNav li.red{
+	background-color:#ea5080;
+	color:#aa2a52;
+	position: relative;
+	top: 15px;
+	left: 30px;
+}
+#colorNav li.blue{
+	background-color:#53bfe2;
+	color:#2884a2;
+	position: relative;
+	top: 0px;
+	left: 60px;
+}
+#colorNav li.yellow{
+	background-color:#f8c54d;
+	color:#ab8426;
+	position: relative;
+	top: 15px;
+	left: 90px;
+}
+#colorNav li.purple{
+	background-color:#df6dc2;
+	color:#9f3c85;
+	position: relative;
+	top: 0px;
+	left: 120px;
+}
+
+#connector0{
+	position: absolute;
+	top: -19px;
+	left: 225px;
+	transform: scale(0.3);
+	z-index: -1;
+}
+#connector1{
+	position: absolute;
+	top: -19px;
+	left: 406px;
+	transform: scale(0.3);
+	z-index: -1;
+}
+#connector2{
+	position: absolute;
+	top: -19px;
+	left: 587px;
+	transform: scale(0.3);
+	z-index: -1;
+}
+#connector3{
+	position: absolute;
+	top: -19px;
+	left: 768px;
+	transform: scale(0.3);
+	z-index: -1;
+}
+#connector4{
+	position: absolute;
+	top: -19px;
+	left: 949px;
+	transform: scale(0.3);
+	z-index: -1;
+}
+#connector5{
+	position: absolute;
+	top: -19px;
+	left: 1130px;
+	transform: scale(0.3);
+	z-index: -1;
+}
+
+#arjuna{
+	list-style: none;
+	font-family: Papyrus, fantasy;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.3999996185303px;
+	color: blue;
+}
+#arjuna_a{
+	position: absolute;
+	top: 79px;
+	left: 419px;
+}
+#arjuna_r{
+	position: absolute;
+	top: 88px;
+	left: 600px;
+}#arjuna_j{
+	position: absolute;
+	top: 79px;
+	left: 783px;
+}#arjuna_u{
+	position: absolute;
+	top: 88px;
+	left: 962px;
+}#arjuna_n{
+	position: absolute;
+	top: 79px;
+	left: 1143px;
+}#arjuna_a_{
+	position: absolute;
+	top: 88px;
+	left: 1324px;
+}
+
+#hr1{
+	position: relative;
+	top: 45px;
+	left: auto;
+	z-index: 0;
+	width: 120%;
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+#hr2{
+	position: relative;
+	top: 45px;
+	left: 32px;
+	z-index: 0;
+	width: 112%;
+	height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
