@@ -54,7 +54,7 @@ section, nav{
 	padding: 6px;
 	padding-left: 400px;
 	width: 943px;
-	background-color: #0f697f;
+	background-color: #f2f9af;
 
 	/*background: rgba(94,186,219,1);
 	background: -moz-linear-gradient(top, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
@@ -65,7 +65,14 @@ section, nav{
 	background: linear-gradient(to bottom, rgba(94,186,219,1) 0%, rgba(42,152,186,1) 38%, rgba(22,138,173,1) 53%, rgba(40,150,185,1) 65%, rgba(94,186,219,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ebadb', endColorstr='#5ebadb', GradientType=0 );
 	*/
-	z-index: 0;
+	z-index: 1;
+}
+#stbox{
+	position: relative;
+	top: 7px;
+	left: -275px;
+	font-size: 25px;
+	color: #bbbbbb;
 }
 #colorNav > ul{
 	width: auto; /* Increase when adding more menu items */
@@ -83,6 +90,7 @@ section, nav{
 	margin: 1px;
 	border-radius: 6px;
 	position:relative;
+	transform: translateY(-31px);
 }
 
 #colorNav > ul > li > a{
